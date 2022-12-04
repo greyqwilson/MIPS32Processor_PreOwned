@@ -1,7 +1,3 @@
-/*
-Still need mux connections and 1 or two more wires, and control unit
-need jump!
-*/
 
 module MIPS32_Processor(clk, reset);
 input clk;
@@ -54,7 +50,7 @@ DataMemory DMem (.address (alu_result),
                  .write_data (reg2_out),
                  .read_data (mem_out),
                  .clk (clk),
-                 .mem_read (ctrl_mem_read),
+                 .read_enable (ctrl_mem_read),
                  .write_enable (ctrl_mem_write));
 
 SignExtensionUnity SEUnit (.bits_in (instruction[15:0]),
