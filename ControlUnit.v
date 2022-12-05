@@ -11,7 +11,7 @@ output wire mem_write;
 output wire alu_src;
 output wire reg_write;
 
-assign reg_dest = 0; //LW ?
+assign reg_dest = (opcode == 6'h00); //LW
 assign branch = (opcode == 6'h04); //beq
 assign mem_read = (opcode == 6'h23); //LW opcode
 assign mem_to_reg = (opcode == 6'h23); //LW
