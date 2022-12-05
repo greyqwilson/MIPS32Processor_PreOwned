@@ -25,3 +25,21 @@ Computer Organization and Design (David A. Patterson & John L. Hennessy)
 Processor verilog implementation guide -- https://electrobinary.blogspot.com/2021/02/mips-processor-design-using-verilog-part1.html
 
 MIPS Assembly code -> Machine code -- https://www.eg.bucknell.edu/~csci320/mips_web/
+
+
+
+Ryley's Learning Experience:
+
+Attempting to understand more about verilog, understanding the design of the control unit and then the rest of the documentation were what I went into firsthand. When talking with Greyson initially, sharing websites with documentation based around the MIPS32 processor and its implementation were extremely helpful.
+
+For the project, the two of us had decided to somehow split the workload with our own searching and coming together to discuss the final output of the project. Using the 16 bit implementation, it functions very similarily to the 32 bit implementation besides the obvious difference of division. The documentation also provided some of the instruction set architecture for this side of the project with additional modules that would take over the final functions required for the project. 
+
+An issue that did come from using this implementation was the time required to finish the vcd file required to generate the GTKWAVE. Having the internal clock on the program created an infite loop.
+
+Implementation of the basic functions had to follow the path of control from OP Field Code to the Control module which we could then again use as the ALUOP Code, which would then go towards the ALU Control Module so that then the ALUOP Code and the INstruction Function Field would be used together to reach the ALU Control Module = ALU_Control Code.
+
+Net sources for the implmentaion
+
+https://www.fpga4student.com/2017/01/verilog-code-for-single-cycle-MIPS-processor.html
+
+https://www.fpga4student.com/2017/01/basic-digital-blocks-in-verilog.html
