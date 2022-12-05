@@ -11,7 +11,7 @@ output wire [31:0] read_data;
 reg [7:0] memArr [31:0]; //of memory
 
 initial begin
-    $readmemh("data_memory2.mem", memArr);
+    $readmemh("data_memory.mem", memArr);
 end
 
 always @(posedge clk)
